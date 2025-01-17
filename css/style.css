@@ -1,0 +1,96 @@
+/* ----- CSS reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* ----- utility classes, universal styles and typography ----- */
+/* light mode */
+/* dark mode */
+html {
+  scroll-behavior: smooth;
+  height: 100%; /* sticky footer */
+}
+
+body {
+  font-family: "Lucida Sans", Verdana, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #00587a;
+  background-image: linear-gradient(to right top, #29bb94, #00b397, #41c291, #56ca8d, #6ad188, #7cd784, #8edd7f, #a1e37b, #b6e977, #ccee74, #e2f472, #f9f871);
+  height: 100%; /* sticky footer */
+  display: flex; /* sticky footer */
+  flex-direction: column; /* sticky footer */
+}
+
+main {
+  flex: 1 0 auto; /* sticky footer */
+  display: flex; /* center main content */
+  align-items: center; /* center main content */
+  justify-content: center; /* center main content */
+}
+
+/* Links, Buttons */
+.hover {
+  transition: color 200ms ease-in-out;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* turn off webkit tap highlight */
+}
+.hover:hover {
+  color: #008697;
+}
+
+/* ----- footer ----- */
+footer {
+  font-size: 1.25rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  text-align: right;
+}
