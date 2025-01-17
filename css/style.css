@@ -53,9 +53,10 @@ h4 {
   text-wrap: balance;
 }
 
-/* ----- utility classes, universal styles and typography ----- */
+/* ----- colors ----- */
 /* light mode */
 /* dark mode */
+/* ----- utility classes, universal styles and typography ----- */
 html {
   scroll-behavior: smooth;
   height: 100%; /* sticky footer */
@@ -65,11 +66,19 @@ body {
   font-family: "Lucida Sans", Verdana, sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #00587a;
-  background-image: linear-gradient(to right top, #29bb94, #00b397, #41c291, #56ca8d, #6ad188, #7cd784, #8edd7f, #a1e37b, #b6e977, #ccee74, #e2f472, #f9f871);
   height: 100%; /* sticky footer */
   display: flex; /* sticky footer */
   flex-direction: column; /* sticky footer */
+}
+
+.body--color-lm {
+  color: #00587a;
+  background-image: linear-gradient(to right top, #29bb94, #00b397, #41c291, #56ca8d, #6ad188, #7cd784, #8edd7f, #a1e37b, #b6e977, #ccee74, #e2f472, #f9f871);
+}
+
+.body--color-dm {
+  color: #fbf4d7;
+  background-image: linear-gradient(to right top, #242e49, #2b324f, #313755, #383b5a, #3f4060, #454465, #4c486b, #524c70, #595176, #61567c, #685b81, #706087);
 }
 
 main {
@@ -78,19 +87,43 @@ main {
   align-items: center; /* center main content */
   justify-content: center; /* center main content */
 }
+main div {
+  margin: 2rem;
+}
 
-/* Links, Buttons */
-.hover {
+/* Buttons */
+.button {
+  padding: 0.25rem 1.5rem;
   transition: color 200ms ease-in-out;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* turn off webkit tap highlight */
+  background-color: inherit;
 }
-.hover:hover {
-  color: #008697;
+
+.button--color-lm {
+  border: 1px solid #00587a;
+}
+.button--color-lm:hover {
+  color: #004662;
+  border: 1.5px solid #004662;
+}
+
+.button--color-dm {
+  border: 1px solid #fbf4d7;
+}
+.button--color-dm:hover {
+  color: #dfd199;
+  border: 1.5px solid #dfd199;
 }
 
 /* ----- footer ----- */
 footer {
   font-size: 1.25rem;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--name {
+  display: flex;
+  align-items: flex-end;
 }
