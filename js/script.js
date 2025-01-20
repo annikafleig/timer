@@ -2,7 +2,7 @@
 
 // variables
 
-const body = document.querySelector(`body`);
+const body = document.body;
 const input = document.querySelector(`input`);
 const labelTimer = document.querySelector(`.timer`);
 const btnStartTimer = document.querySelector(`.btn--start-timer`);
@@ -15,6 +15,7 @@ let timer;
 const startTimer = function () {
   // set time to user input and convert to seconds
   let time = +input.value * 60;
+  input.value = ``;
 
   if (time > 0) {
     const tick = function () {
@@ -47,7 +48,17 @@ btnStartTimer.addEventListener(`click`, function () {
   // clear existing timer if necessary
   if (timer) clearInterval(timer);
   timer = startTimer();
-  input.value = ``;
+});
+
+document.addEventListener(`keydown`, function (e) {
+  if (e.key === `Enter`) {
+    if (input.value != ``) {
+      // clear existing timer if necessary
+      if (timer) clearInterval(timer);
+      timer = startTimer();
+      input.blur();
+    }
+  }
 });
 
 // change mode (light / dark)
