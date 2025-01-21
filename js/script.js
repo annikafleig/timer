@@ -3,7 +3,7 @@
 // variables
 
 const body = document.body;
-const input = document.querySelector(`input`);
+const input = document.querySelector(`#input--seconds`);
 const labelTimer = document.querySelector(`.timer`);
 const btnStartTimer = document.querySelector(`.btn--start-timer`);
 const btnChangeMode = document.querySelector(`.btn--change-mode`);
@@ -14,16 +14,18 @@ let timer;
 
 const startTimer = function () {
   // set time to user input and convert to seconds
-  let time = +input.value * 60;
+  let time = +input.value;
   input.value = ``;
 
   if (time > 0) {
     const tick = function () {
-      const min = String(Math.trunc(time / 60)).padStart(2, 0);
-      const sec = String(time % 60).padStart(2, 0);
+      // const min = String(Math.trunc(time / 60)).padStart(2, 0);
+      // const sec = String(time % 60).padStart(2, 0);
 
-      // in each call print the remaining time to the UI
-      labelTimer.textContent = `${min}:${sec}`;
+      // // in each call print the remaining time to the UI
+      // labelTimer.textContent = `${min}:${sec}`;
+
+      labelTimer.textContent = time;
 
       // when 0 seconds, stop the timer and print time's up to the UI
       if (time === 0) {

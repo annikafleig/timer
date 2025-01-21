@@ -84,11 +84,33 @@ body {
 main {
   flex: 1 0 auto; /* sticky footer */
   display: flex; /* center main content */
+  flex-direction: column;
   align-items: center; /* center main content */
   justify-content: center; /* center main content */
 }
-main div {
-  margin: 2rem;
+
+/* Form */
+form {
+  margin: 1.5rem;
+}
+form span {
+  margin: 0.3rem;
+}
+
+.input {
+  width: 75px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.btn--start-timer {
+  margin: 1.5rem 0.3rem 1.5rem 2.5rem;
+}
+
+.timer {
+  margin: 1rem;
+  font-size: 2.5rem;
 }
 
 /* Buttons */
@@ -97,6 +119,8 @@ main div {
   transition: color 200ms ease-in-out;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* turn off webkit tap highlight */
   background-color: inherit;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .button--color-lm {
@@ -104,7 +128,8 @@ main div {
 }
 .button--color-lm:hover {
   color: #004662;
-  border: 1.5px solid #004662;
+  border: 1px solid #004662;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .button--color-dm {
@@ -112,7 +137,8 @@ main div {
 }
 .button--color-dm:hover {
   color: #dfd199;
-  border: 1.5px solid #dfd199;
+  border: 1px solid #dfd199;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ----- footer ----- */

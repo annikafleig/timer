@@ -15,14 +15,24 @@
   <body class="body--color-lm">
     <header class="header"></header>
 
-    <main class="home">
-      <div>
-        <input type="number" />
-        <span>Minuten</span>
-      </div>
-      <div>
-        <button class="button button--color-lm btn--start-timer">Start</button>
-      </div>
+    <main>
+      <form action="#">
+        <span>
+          <input type="number" id="input--hours" class="input" />
+          <label for="input--hours">h</label>
+        </span>
+        <span>
+          <input type="number" id="input--minutes" class="input" />
+          <label for="input--minutes">min</label>
+        </span>
+        <span>
+          <input type="number" id="input--seconds" class="input" />
+          <label for="input--seconds">s</label>
+        </span>
+        <button type="button" class="button button--color-lm btn--start-timer">
+          Start
+        </button>
+      </form>
       <div class="timer">00:00</div>
     </main>
 
