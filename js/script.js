@@ -48,7 +48,7 @@ const startTimer = function () {
     timer = setInterval(tick, 1000);
     return timer;
   } else {
-    alert(`Bitte positive Zahl eingeben`);
+    alert(`Bitte eine positive Zahl eingeben`);
     labelTimer.textContent = `00:00:00`;
   }
 };
