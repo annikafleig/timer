@@ -33,9 +33,13 @@ const startTimer = function () {
       // in each call print the remaining time to the UI
       labelTimer.textContent = `${hours}:${min}:${sec}`;
 
-      // when 0 seconds, stop the timer and print time's up to the UI
+      // time's up (clear timer and show alter window)
       if (time === 0) {
         clearInterval(timer);
+        // without setTimeout() the remaining time is only displayed as 00:00:00 AFTER the alert window is closed
+        setTimeout(() => {
+          alert(`Die Zeit ist um`);
+        }, 100);
       }
 
       // decrease 1s
