@@ -3,7 +3,9 @@
 // variables
 
 const body = document.body;
-const input = document.querySelector(`#input--seconds`);
+const inputHours = document.querySelector(`#input--hours`);
+const inputMinutes = document.querySelector(`#input--minutes`);
+const inputSeconds = document.querySelector(`#input--seconds`);
 const labelTimer = document.querySelector(`.timer`);
 const btnStartTimer = document.querySelector(`.btn--start-timer`);
 const btnChangeMode = document.querySelector(`.btn--change-mode`);
@@ -14,18 +16,22 @@ let timer;
 
 const startTimer = function () {
   // set time to user input and convert to seconds
-  let time = +input.value;
-  input.value = ``;
+  let time =
+    +inputHours.value * 60 * 60 +
+    +inputMinutes.value * 60 +
+    +inputSeconds.value;
+  inputHours.value = ``;
+  inputMinutes.value = ``;
+  inputSeconds.value = ``;
 
   if (time > 0) {
     const tick = function () {
-      // const min = String(Math.trunc(time / 60)).padStart(2, 0);
-      // const sec = String(time % 60).padStart(2, 0);
+      const hours = String(Math.trunc(time / (60 * 60))).padStart(2, 0);
+      const min = String(Math.trunc((time % (60 * 60)) / 60)).padStart(2, 0);
+      const sec = String((time % (60 * 60)) % 60).padStart(2, 0);
 
-      // // in each call print the remaining time to the UI
-      // labelTimer.textContent = `${min}:${sec}`;
-
-      labelTimer.textContent = time;
+      // in each call print the remaining time to the UI
+      labelTimer.textContent = `${hours}:${min}:${sec}`;
 
       // when 0 seconds, stop the timer and print time's up to the UI
       if (time === 0) {
@@ -43,6 +49,7 @@ const startTimer = function () {
     return timer;
   } else {
     alert(`Bitte positive Zahl eingeben`);
+    labelTimer.textContent = `00:00:00`;
   }
 };
 
@@ -54,11 +61,17 @@ btnStartTimer.addEventListener(`click`, function () {
 
 document.addEventListener(`keydown`, function (e) {
   if (e.key === `Enter`) {
-    if (input.value != ``) {
+    if (
+      inputHours.value != `` ||
+      inputMinutes.value != `` ||
+      inputSeconds.value != ``
+    ) {
       // clear existing timer if necessary
       if (timer) clearInterval(timer);
       timer = startTimer();
-      input.blur();
+      inputHours.blur();
+      inputMinutes.blur();
+      inputSeconds.blur();
     }
   }
 });
