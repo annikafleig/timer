@@ -71,6 +71,23 @@ body {
   flex-direction: column; /* sticky footer */
 }
 
+main {
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.index {
+  flex: 1 0 auto; /* sticky footer */
+  display: flex; /* center main content */
+  flex-direction: column;
+  align-items: center; /* center main content */
+  justify-content: center; /* center main content */
+}
+
 .body--color-lm {
   color: #00587a;
   background-image: linear-gradient(to right top, #29bb94, #00b397, #41c291, #56ca8d, #6ad188, #7cd784, #8edd7f, #a1e37b, #b6e977, #ccee74, #e2f472, #f9f871);
@@ -81,15 +98,7 @@ body {
   background-image: linear-gradient(to right top, #242e49, #2b324f, #313755, #383b5a, #3f4060, #454465, #4c486b, #524c70, #595176, #61567c, #685b81, #706087);
 }
 
-main {
-  flex: 1 0 auto; /* sticky footer */
-  display: flex; /* center main content */
-  flex-direction: column;
-  align-items: center; /* center main content */
-  justify-content: center; /* center main content */
-}
-
-/* Form */
+/* Form and Timer */
 form {
   margin: 1.5rem;
 }
@@ -113,32 +122,38 @@ form span {
   font-size: 2.5rem;
 }
 
-/* Buttons */
+/* Buttons and Links */
 .button {
   padding: 0.25rem 1.5rem;
   transition: color 200ms ease-in-out;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* turn off webkit tap highlight */
   background-color: inherit;
   cursor: pointer;
+  border: 1px solid;
   border-radius: 5px;
 }
 
-.button--color-lm {
-  border: 1px solid #00587a;
-}
 .button--color-lm:hover {
   color: #004662;
-  border: 1px solid #004662;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button--color-dm {
-  border: 1px solid #fbf4d7;
-}
 .button--color-dm:hover {
   color: #dfd199;
-  border: 1px solid #dfd199;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.a--color-lm:hover {
+  color: #004662;
+}
+
+.a--color-dm:hover {
+  color: #dfd199;
 }
 
 /* ----- footer ----- */
@@ -149,7 +164,11 @@ footer {
   justify-content: space-between;
 }
 
-.footer--name {
+.footer--nav-name {
   display: flex;
   align-items: flex-end;
+}
+
+.footer--name {
+  margin-left: 1.5rem;
 }
