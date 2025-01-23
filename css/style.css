@@ -56,7 +56,7 @@ h4 {
 /* ----- colors ----- */
 /* light mode */
 /* dark mode */
-/* ----- utility classes, universal styles and typography ----- */
+/* ----- universal styles and typography ----- */
 html {
   scroll-behavior: smooth;
   height: 100%; /* sticky footer */
@@ -80,6 +80,7 @@ h1 {
   padding-bottom: 2rem;
 }
 
+/* ----- utility classes  ----- */
 .index {
   flex: 1 0 auto; /* sticky footer */
   display: flex; /* center main content */
@@ -96,6 +97,11 @@ h1 {
 .body--color-dm {
   color: #fbf4d7;
   background-image: linear-gradient(to right top, #242e49, #2b324f, #313755, #383b5a, #3f4060, #454465, #4c486b, #524c70, #595176, #61567c, #685b81, #706087);
+}
+
+.body--color-simple {
+  color: #4c4944;
+  background-color: #fffcf6;
 }
 
 /* Form and Timer */
