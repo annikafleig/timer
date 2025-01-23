@@ -9,6 +9,7 @@ const inputSeconds = document.querySelector(`#input--seconds`);
 const labelTimer = document.querySelector(`.timer`);
 const btnStartTimer = document.querySelector(`.btn--start-timer`);
 const btnChangeMode = document.querySelector(`.btn--change-mode`);
+const footer = document.querySelector(`footer`);
 const AllFooterNavA = document.querySelectorAll(`.footer--nav-a`);
 
 let timer;
@@ -94,6 +95,9 @@ btnChangeMode.addEventListener(`click`, function () {
   btnChangeMode.textContent = `${
     body.classList.contains(`body--color-lm`) ? `Dunkler` : `Heller`
   } Modus`;
+
+  footer.classList.toggle(`footer--color-lm`);
+  footer.classList.toggle(`footer--color-dm`);
 
   AllFooterNavA.forEach((a) => {
     a.classList.toggle(`a--color-lm`);
