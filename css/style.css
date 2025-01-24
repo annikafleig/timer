@@ -234,4 +234,23 @@ footer {
     justify-self: start;
   }
 }
+/* remove hover effects on touch devices */
+@media (hover: none) {
+  .button--color-lm:hover {
+    background-color: initial;
+    color: initial;
+  }
+  .button--color-dm:hover {
+    background-color: initial;
+    color: initial;
+  }
+  .a--color-lm:hover {
+    background-color: initial;
+    color: initial;
+  }
+  .a--color-dm:hover {
+    background-color: initial;
+    color: initial;
+  }
+}
 /* plain */
