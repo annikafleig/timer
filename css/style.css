@@ -74,6 +74,7 @@ body {
 
 main {
   padding: 1.5rem;
+  flex: 1 0 auto; /* sticky footer */
 }
 
 h1 {
@@ -83,7 +84,6 @@ h1 {
 
 /* ----- index page  ----- */
 .index {
-  flex: 1 0 auto; /* sticky footer */
   display: flex; /* center main content */
   flex-direction: column;
   align-items: center; /* center main content */
@@ -179,10 +179,17 @@ footer {
 .footer--nav-name {
   display: flex;
   align-items: flex-end;
+  font-size: 1rem;
+  margin-top: 0.75rem;
 }
 
 .footer--name {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+}
+
+.footer--nav-a {
+  padding: 0.1rem;
+  margin-left: 0.75rem;
 }
 
 /* ----- other pages -----*/
