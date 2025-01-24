@@ -87,10 +87,10 @@ document.addEventListener(`keydown`, function (e) {
 btnChangeMode.addEventListener(`click`, function () {
   body.classList.toggle(`body--color-lm`);
   body.classList.toggle(`body--color-dm`);
-  btnStartTimer.classList.toggle(`button--color-lm`);
-  btnStartTimer.classList.toggle(`button--color-dm`);
-  btnChangeMode.classList.toggle(`button--color-lm`);
-  btnChangeMode.classList.toggle(`button--color-dm`);
+  btnStartTimer.classList.toggle(`btn--color-lm`);
+  btnStartTimer.classList.toggle(`btn--color-dm`);
+  btnChangeMode.classList.toggle(`btn--color-lm`);
+  btnChangeMode.classList.toggle(`btn--color-dm`);
 
   btnChangeMode.textContent = `${
     body.classList.contains(`body--color-lm`) ? `Dunkler` : `Heller`

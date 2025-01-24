@@ -8,7 +8,7 @@ const footerPlaceholder = document.querySelector(`.footer--placeholder`);
 
 const loadFooter = function () {
   footerPlaceholder.innerHTML = `<div>
-  <button class="button a--color-plain">
+  <button class="btn a--color-plain btn--footer">
     <a href="./index.html" class="footer--timer">Timer</a>
   </button>
 </div>

@@ -130,7 +130,7 @@ form span {
 }
 
 /* ----- buttons and links ----- */
-.button {
+.btn {
   padding: 0.25rem 1.5rem;
   transition: color 200ms ease-in-out;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* turn off webkit tap highlight */
@@ -145,12 +145,12 @@ a {
   border-bottom: 1px solid;
 }
 
-.button--color-lm:hover {
+.btn--color-lm:hover {
   color: #004662;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button--color-dm:hover {
+.btn--color-dm:hover {
   color: #dfd199;
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -232,7 +232,7 @@ footer {
     display: grid;
     justify-content: stretch;
   }
-  .btn--change-mode {
+  .btn--footer {
     justify-self: start;
     margin-bottom: 0.5rem;
   }
@@ -261,11 +261,11 @@ footer {
 }
 /* remove hover effects on touch devices */
 @media (hover: none) {
-  .button--color-lm:hover {
+  .btn--color-lm:hover {
     background-color: inherit;
     color: inherit;
   }
-  .button--color-dm:hover {
+  .btn--color-dm:hover {
     background-color: inherit;
     color: inherit;
   }
