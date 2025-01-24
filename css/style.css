@@ -78,8 +78,13 @@ main {
 }
 
 h1 {
-  font-size: 2rem;
-  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 /* ----- index page  ----- */
@@ -198,8 +203,16 @@ footer {
   background-color: #fffcf6;
 }
 
+.footer--placeholder {
+  background-color: #faf1dd;
+}
+
 .a--color-plain:hover {
-  color: #141109;
+  color: #89662a;
+}
+
+.footer--timer {
+  border-bottom: none;
 }
 
 /* ----- media queries ----- */
