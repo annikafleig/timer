@@ -115,6 +115,7 @@ form span {
 }
 
 .input {
+  background-color: inherit;
   width: 75px;
   text-align: center;
   border: 1px solid;
