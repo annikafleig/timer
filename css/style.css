@@ -218,15 +218,45 @@ footer {
   max-width: 900px;
   margin: 0 auto;
 }
-.impressum h1,
+
+.impressum h1 {
+  font-size: 2rem;
+}
+.impressum h2 {
+  font-size: 1.5rem;
+  padding: 1rem 0 0.3rem 0;
+}
+
+.privacy {
+  max-width: 900px;
+  margin: 0 auto;
+}
 .privacy h1 {
   font-size: 2rem;
 }
-.impressum h2,
 .privacy h2 {
+  font-size: 1.8rem;
+  padding: 1rem 0 0.3rem 0;
+}
+.privacy h3 {
   font-size: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 0.3rem;
+  font-weight: bold;
+  padding: 0.7rem 0 0.3rem 0;
+}
+.privacy h4 {
+  font-size: 1.5rem;
+  padding: 0.3rem 0;
+}
+.privacy ul {
+  font-size: 1.2rem;
+}
+.privacy li {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.6rem;
+}
+.privacy p:last-of-type {
+  padding: 1rem 0;
 }
 
 /* ----- media queries ----- */
