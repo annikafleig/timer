@@ -261,6 +261,10 @@ footer {
   padding: 1rem 0;
 }
 
+.back-to-timer {
+  padding: 1.5rem 0;
+}
+
 /* ----- media queries ----- */
 @media (max-width: 615px) {
   form {
