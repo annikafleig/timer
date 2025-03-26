@@ -45,14 +45,6 @@ svg {
   max-width: 100%;
 }
 
-/* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
 /* ----- colors ----- */
 /* light mode */
 /* dark mode */
@@ -215,6 +207,26 @@ footer {
 
 .footer--timer {
   border-bottom: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.impressum,
+.privacy {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.impressum h1,
+.privacy h1 {
+  font-size: 2rem;
+}
+.impressum h2,
+.privacy h2 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
 }
 
 /* ----- media queries ----- */
