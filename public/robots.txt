@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahf-timer.netlify.app/sitemap-index.xml
