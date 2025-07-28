@@ -1,16 +1,36 @@
 ---
-
+import FooterIndex from '../components/Footer-index.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+    title="Timer"
+    description="Eine einfache Timer-Anwendung zur Messung von Stunden, Minuten und Sekunden."
+>
+    <Fragment slot="head">
+        <script src="../scripts/script-index.js"></script>
+    </Fragment>
+
+    <main class="index main--color-lm">
+        <form action="#">
+            <span class="hours">
+                <input type="number" id="input--hours" class="input" />
+                <label for="input--hours">h</label>
+            </span>
+            <span class="minutes">
+                <input type="number" id="input--minutes" class="input" />
+                <label for="input--minutes">min</label>
+            </span>
+            <span class="seconds">
+                <input type="number" id="input--seconds" class="input" />
+                <label for="input--seconds">s</label>
+            </span>
+            <button type="button" class="btn btn--color-lm btn--start-timer">
+                Start
+            </button>
+        </form>
+        <div class="timer">00:00:00</div>
+    </main>
+
+    <FooterIndex />
+</Layout>

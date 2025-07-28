@@ -1,0 +1,440 @@
+@use 'sass:color';
+
+// ===========================
+// CSS reset
+// ===========================
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+// prevent font size inflation
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+// avoid text overflows
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+// improve media defaults
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+// ===========================
+// colors
+// ===========================
+
+// light mode
+$font-color-lm: #00587a;
+$link-hover-color-lm: #004662;
+$background-color-1-lm: #29bb94;
+$background-color-2-lm: #00b397;
+$background-color-3-lm: #41c291;
+$background-color-4-lm: #56ca8d;
+$background-color-5-lm: #6ad188;
+$background-color-6-lm: #7cd784;
+$background-color-7-lm: #8edd7f;
+$background-color-8-lm: #a1e37b;
+$background-color-9-lm: #b6e977;
+$background-color-10-lm: #ccee74;
+$background-color-11-lm: #e2f472;
+$background-color-12-lm: #f9f871;
+
+// dark mode
+$font-color-dm: #fbf4d7;
+$link-hover-color-dm: #dfd199;
+$background-color-1-dm: #242e49;
+$background-color-2-dm: #2b324f;
+$background-color-3-dm: #313755;
+$background-color-4-dm: #383b5a;
+$background-color-5-dm: #3f4060;
+$background-color-6-dm: #454465;
+$background-color-7-dm: #4c486b;
+$background-color-8-dm: #524c70;
+$background-color-9-dm: #595176;
+$background-color-10-dm: #61567c;
+$background-color-11-dm: #685b81;
+$background-color-12-dm: #706087;
+
+// plain mode
+$font-color: #4c4944;
+$link-hover-color: #89662a;
+$background-color: #fffcf6;
+$background-color-2: #faf1dd;
+
+// ===========================
+// universal styles and typography
+// ===========================
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ysabeau Office', 'Lucida Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.page-wrapper {
+    display: flex; // sticky footer
+    flex-direction: column; // sticky footer
+    min-height: 100vh; // sticky footer
+}
+
+main {
+    padding: 1.5rem;
+    flex: 1; // sticky footer
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+// ===========================
+// index page
+// ===========================
+
+.index {
+    display: flex; // center main content
+    flex-direction: column;
+    align-items: center; // center main content
+    justify-content: center; // center main content
+}
+
+.main--color-lm {
+    color: $font-color-lm;
+    background-image: linear-gradient(
+        to right top,
+        $background-color-1-lm,
+        $background-color-2-lm,
+        $background-color-3-lm,
+        $background-color-4-lm,
+        $background-color-5-lm,
+        $background-color-6-lm,
+        $background-color-7-lm,
+        $background-color-8-lm,
+        $background-color-9-lm,
+        $background-color-10-lm,
+        $background-color-11-lm,
+        $background-color-12-lm
+    );
+}
+
+.main--color-dm {
+    color: $font-color-dm;
+    background-image: linear-gradient(
+        to right top,
+        $background-color-1-dm,
+        $background-color-2-dm,
+        $background-color-3-dm,
+        $background-color-4-dm,
+        $background-color-5-dm,
+        $background-color-6-dm,
+        $background-color-7-dm,
+        $background-color-8-dm,
+        $background-color-9-dm,
+        $background-color-10-dm,
+        $background-color-11-dm,
+        $background-color-12-dm
+    );
+}
+
+// Form and Timer
+
+form {
+    margin: 1.5rem;
+
+    span {
+        margin: 0.3rem;
+    }
+}
+
+.input {
+    background-color: inherit;
+    width: 75px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.btn--start-timer {
+    margin: 1.5rem 0.3rem 1.5rem 2.5rem;
+}
+
+.timer {
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+// ===========================
+// buttons and links
+// ===========================
+
+.btn {
+    padding: 0.25rem 1.5rem;
+    transition: color 200ms ease-in-out;
+    -webkit-tap-highlight-color: rgba(
+        255,
+        255,
+        255,
+        0
+    ); // turn off webkit tap highlight
+    background-color: inherit;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.btn--color-lm:hover {
+    color: $link-hover-color-lm;
+    background-color: color.adjust(#ffffff, $alpha: -0.9);
+}
+
+.btn--color-dm:hover {
+    color: $link-hover-color-dm;
+    background-color: color.adjust(#000000, $alpha: -0.9);
+}
+
+.a--color-lm:hover {
+    color: $link-hover-color-lm;
+}
+
+.a--color-dm:hover {
+    color: $link-hover-color-dm;
+}
+
+// ===========================
+// footer
+// ===========================
+
+.footer {
+    font-size: 1.4rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--color-lm {
+    color: $font-color-lm;
+    border-top: 3px solid $background-color-5-lm;
+    background-color: $background-color-4-lm;
+}
+
+.footer--color-dm {
+    color: $font-color-dm;
+    border-top: 3px solid $background-color-5-dm;
+    background-color: $background-color-4-dm;
+}
+
+.footer--nav-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+}
+
+.footer--name {
+    margin-left: 1rem;
+}
+
+.footer--nav-a {
+    padding: 0.1rem;
+    margin-left: 0.75rem;
+}
+
+// other pages
+
+.main--color-plain {
+    color: $font-color;
+    background-color: $background-color;
+}
+
+.footer-other-pages {
+    color: $font-color;
+    background-color: $background-color-2;
+}
+
+.a--color-plain:hover {
+    color: $link-hover-color;
+}
+
+.footer--timer {
+    border-bottom: none;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.impressum,
+.privacy {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.impressum {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding: 1rem 0 0.3rem 0;
+    }
+}
+
+.privacy {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
+    h2 {
+        font-size: 1.8rem;
+        padding: 1rem 0 0.3rem 0;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0.7rem 0 0.3rem 0;
+    }
+    h4 {
+        font-size: 1.5rem;
+        padding: 0.3rem 0;
+    }
+    ul {
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+    }
+    li {
+        list-style-type: disc;
+        list-style-position: outside;
+        margin-left: 1.6rem;
+    }
+    p:last-of-type {
+        padding: 1rem 0;
+    }
+}
+
+.back-to-timer {
+    padding: 1.5rem 0;
+}
+
+// ===========================
+// media queries
+// ===========================
+
+@media (max-width: 615px) {
+    form {
+        display: grid;
+        margin-bottom: 0;
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .btn--start-timer {
+        margin: 1.5rem 0.3rem;
+        grid-area: 2 / 1 / 3 / 4;
+        justify-self: center;
+    }
+
+    footer {
+        display: grid;
+        justify-content: stretch;
+    }
+    .btn--footer {
+        justify-self: start;
+        margin-bottom: 0.5rem;
+    }
+    .footer--nav-name {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 445px) {
+    form {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .hours {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .minutes {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .seconds {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .btn--start-timer {
+        grid-area: 4 / 1 / 5 / 2;
+        justify-self: start;
+    }
+}
+
+// remove hover effects on touch devices
+@media (hover: none) {
+    .btn--color-lm:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+    .btn--color-dm:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+    .a--color-lm:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+    .a--color-dm:hover {
+        background-color: inherit;
+        color: inherit;
+    }
+    .a--color-plain:hover {
+        color: inherit;
+    }
+}
